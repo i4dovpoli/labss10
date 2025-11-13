@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна - CMS-подібний сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Мій Сайт</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li><a href="about.html">Про сайт</a></li>
+                    <li><a href="news.html">Новини</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Slider Section -->
+        <section class="hero-slider">
+            <div class="slider-container">
+                <div class="slide active">
+                    <div class="slide-content">
+                        <h2>Ласкаво просимо на наш сайт!</h2>
+                        <p>Відкрийте для себе світ можливостей</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Сучасні технології</h2>
+                        <p>Інновації в кожному проєкті</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Якісний контент</h2>
+                        <p>Все для вашого комфорту</p>
+                    </div>
+                </div>
+                <button class="slider-btn prev" onclick="changeSlide(-1)">‹</button>
+                <button class="slider-btn next" onclick="changeSlide(1)">›</button>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Content Section -->
+        <section class="dynamic-content">
+            <div class="container">
+                <h2>Рекомендовані статті</h2>
+                <div id="contentLoader" class="articles-grid">
+                    <!-- Content will be loaded from JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2>Наші переваги</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Швидкість</h3>
+                        <p>Оптимізована продуктивність для максимальної швидкості завантаження</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Адаптивність</h3>
+                        <p>Ідеальний вигляд на всіх пристроях - від мобільних до десктопів</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Дизайн</h3>
+                        <p>Сучасний та привабливий дизайн для найкращого користувацького досвіду</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Безпека</h3>
+                        <p>Надійний захист ваших даних та конфіденційної інформації</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Мій Сайт. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="js/slider.js"></script>
+    <script src="js/content-loader.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

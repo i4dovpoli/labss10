@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - CMS-подібний сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Мій Сайт</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="about.html">Про сайт</a></li>
+                    <li><a href="news.html">Новини</a></li>
+                    <li><a href="gallery.html" class="active">Галерея</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Фотогалерея</h1>
+                <p>Перегляньте наші найкращі роботи та проєкти</p>
+            </div>
+        </section>
+
+        <section class="gallery-content">
+            <div class="container">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Всі</button>
+                    <button class="filter-btn" data-filter="nature">Природа</button>
+                    <button class="filter-btn" data-filter="tech">Технології</button>
+                    <button class="filter-btn" data-filter="design">Дизайн</button>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Gallery items will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for image viewing -->
+        <div id="imageModal" class="modal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div class="modal-caption" id="modalCaption"></div>
+            <button class="modal-prev" onclick="changeModalImage(-1)">‹</button>
+            <button class="modal-next" onclick="changeModalImage(1)">›</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Мій Сайт. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
